@@ -29,6 +29,9 @@ app.use('/api', authRoute);
 app.use('/api/hotels', hotelRoute);
 app.use('/api/rooms', romeRoute);
 app.use('/api/orders', orderRoute);
+app.use('/', (req, res) => {
+  res.send('Connect successfull');
+});
 
 app.use(notFound);
 app.use(errorHandler);
